@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern
+namespace DecoratorPattern.Beverage_example
 {
     class Mocha : CondimentDecorator
     {

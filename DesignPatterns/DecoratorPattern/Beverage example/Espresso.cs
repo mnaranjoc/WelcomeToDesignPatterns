@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DecoratorPattern
+namespace DecoratorPattern.Beverage_example
 {
-    class HouseBlend : Beverage
+    class Espresso : Beverage
     {
         public override string getDescription()
         {
-            return "House blend cofee";
+            return "Espresso";
         }
 
         public override double cost()
         {
-            return .89;
+            return 1.99;
         }
     }
 }
