@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="Singletonv2.cs" />
+    <Compile Include="Singletonv3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
