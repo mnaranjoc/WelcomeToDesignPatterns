@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes\ICommand.cs" />
+    <Compile Include="Classes\Light.cs" />
+    <Compile Include="Classes\LightOnCommand.cs" />
+    <Compile Include="Classes\SimpleRemoteControl.cs" />
+    <Compile Include="RemoteControlTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
