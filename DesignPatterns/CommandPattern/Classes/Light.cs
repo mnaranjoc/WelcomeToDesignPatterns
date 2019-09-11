@@ -8,5 +8,10 @@ namespace CommandPattern.Classes
         {
             Console.WriteLine("Light is on");
         }
+
+        public void off()
+        {
+            Console.WriteLine("Light is off");
+        }
     }
 }

@@ -14,6 +14,10 @@ namespace CommandPattern
             control.setCommand(lightOnCommand);
             control.buttonWasPressed();
 
+            LightOffCommand lightOffCommand = new LightOffCommand(light);
+            control.setCommand(lightOffCommand);
+            control.buttonWasPressed();
+
             Console.ReadLine();
         }
     }
