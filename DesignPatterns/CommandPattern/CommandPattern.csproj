@@ -47,6 +47,8 @@
     <Compile Include="Classes\Light.cs" />
     <Compile Include="Classes\LightOffCommand.cs" />
     <Compile Include="Classes\LightOnCommand.cs" />
+    <Compile Include="Classes\NoCommand.cs" />
+    <Compile Include="Classes\RemoteControl.cs" />
     <Compile Include="Classes\SimpleRemoteControl.cs" />
     <Compile Include="RemoteControlTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
