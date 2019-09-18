@@ -26,7 +26,19 @@ namespace CommandPattern
             StereoOnWithCDCommand livingRoomStereoOnWithCDCommand = new StereoOnWithCDCommand(livingRoomStereo);
             StereoOffCommand livingRoomStereoOffCommand = new StereoOffCommand(livingRoomStereo);
 
+            control.setCommand(0, livingRoomLightOnCommand, livingRoomLightOffCommand);
+            control.setCommand(1, kitchenLightLightOnCommand, kitchenLightLightOffCommand);
+            control.setCommand(2, livingRoomStereoOnWithCDCommand, livingRoomStereoOffCommand);
+
             Console.WriteLine(control.toString());
+
+            control.onButtonWasPressed(0);
+            control.offButtonWasPressed(0);
+            control.onButtonWasPressed(1);
+            control.offButtonWasPressed(1);
+            control.onButtonWasPressed(2);
+            control.offButtonWasPressed(2);
+
             Console.ReadLine();
         }
 
