@@ -34,10 +34,13 @@ namespace CommandPattern
 
             control.onButtonWasPressed(0);
             control.offButtonWasPressed(0);
+            control.undoButtonWasPressed();
             control.onButtonWasPressed(1);
             control.offButtonWasPressed(1);
+            control.undoButtonWasPressed();
             control.onButtonWasPressed(2);
             control.offButtonWasPressed(2);
+            control.undoButtonWasPressed();
 
             Console.ReadLine();
         }

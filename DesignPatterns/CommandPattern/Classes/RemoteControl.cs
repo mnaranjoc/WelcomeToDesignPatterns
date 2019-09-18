@@ -10,6 +10,7 @@ namespace CommandPattern.Classes
     {
         ICommand[] onCommands;
         ICommand[] offCommands;
+        ICommand undoCommand;
 
         public RemoteControl()
         {
@@ -22,6 +23,8 @@ namespace CommandPattern.Classes
                 onCommands[i] = noCommand;
                 offCommands[i] = noCommand;
             }
+
+            undoCommand = noCommand;
         }
 
         public void setCommand(int slot, ICommand onCommand, ICommand offCommand)
@@ -32,12 +35,25 @@ namespace CommandPattern.Classes
 
         public void onButtonWasPressed(int slot)
         {
-            onCommands[slot].execute();
+            if (onCommands[slot] != null)
+            {
+                onCommands[slot].execute();
+                undoCommand = onCommands[slot];
+            }
         }
 
         public void offButtonWasPressed(int slot)
         {
-            offCommands[slot].execute();
+            if (offCommands[slot] != null)
+            {
+                offCommands[slot].execute();
+                undoCommand = offCommands[slot];
+            }
+        }
+
+        public void undoButtonWasPressed()
+        {
+            undoCommand.undo();
         }
 
         public string toString()

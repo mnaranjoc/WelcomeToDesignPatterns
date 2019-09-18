@@ -17,12 +17,12 @@ namespace CommandPattern.Classes
 
         public void execute()
         {
-            this.off();
+            stereo.off();
         }
 
-        public void off()
+        public void undo()
         {
-            Console.WriteLine("Stereo off");
+            stereo.on();
         }
     }
 }

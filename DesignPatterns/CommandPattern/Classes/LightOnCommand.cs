@@ -1,4 +1,6 @@
-﻿namespace CommandPattern.Classes
+﻿using System;
+
+namespace CommandPattern.Classes
 {
     class LightOnCommand : ICommand
     {
@@ -12,6 +14,11 @@
         public void execute()
         {
             light.on();
+        }
+
+        public void undo()
+        {
+            light.off();
         }
     }
 }

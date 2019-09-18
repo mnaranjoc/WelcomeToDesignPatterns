@@ -8,9 +8,8 @@ namespace CommandPattern.Classes
 {
     class NoCommand : ICommand
     {
-        public void execute()
-        {
-            Console.WriteLine("");
-        }
+        public void execute() { }
+
+        public void undo() { }
     }
 }

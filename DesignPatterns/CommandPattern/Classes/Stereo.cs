@@ -21,6 +21,11 @@ namespace CommandPattern.Classes
             Console.WriteLine(name + " stereo set cd");
         }
 
+        internal void off()
+        {
+            Console.WriteLine(name + " stereo is off");
+        }
+
         internal void setVolume(int v)
         {
             Console.WriteLine(name + " stereo volume is " + v.ToString());
