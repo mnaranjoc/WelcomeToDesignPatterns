@@ -4,14 +4,21 @@ namespace CommandPattern.Classes
 {
     class Light
     {
+        string name;
+
+        public Light(string name)
+        {
+            this.name = name;
+        }
+
         public void on()
         {
-            Console.WriteLine("Light is on");
+            Console.WriteLine(name + " is on");
         }
 
         public void off()
         {
-            Console.WriteLine("Light is off");
+            Console.WriteLine(name + " is off");
         }
     }
 }

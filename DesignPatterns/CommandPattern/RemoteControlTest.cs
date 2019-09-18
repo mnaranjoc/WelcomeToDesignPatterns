@@ -15,6 +15,17 @@ namespace CommandPattern
         {
             RemoteControl control = new RemoteControl();
 
+            Light livingRoomLight = new Light("Living Room");
+            Light kitchenLight = new Light("Kitchen Light");
+            Stereo livingRoomStereo = new Stereo("Living Room");
+
+            LightOnCommand livingRoomLightOnCommand = new LightOnCommand(livingRoomLight);
+            LightOffCommand livingRoomLightOffCommand = new LightOffCommand(livingRoomLight);
+            LightOnCommand kitchenLightLightOnCommand = new LightOnCommand(kitchenLight);
+            LightOffCommand kitchenLightLightOffCommand = new LightOffCommand(kitchenLight);
+            StereoOnWithCDCommand livingRoomStereoOnWithCDCommand = new StereoOnWithCDCommand(livingRoomStereo);
+            StereoOffCommand livingRoomStereoOffCommand = new StereoOffCommand(livingRoomStereo);
+
             Console.WriteLine(control.toString());
             Console.ReadLine();
         }
@@ -22,7 +33,7 @@ namespace CommandPattern
         public static void SimpleRemoteController()
         {
             SimpleRemoteControl control = new SimpleRemoteControl();
-            Light light = new Light();
+            Light light = new Light("Simple light");
 
             LightOnCommand lightOnCommand = new LightOnCommand(light);
             control.setCommand(lightOnCommand);
