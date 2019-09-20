@@ -24,6 +24,7 @@ namespace AdapterAndFacadePattern
             duckAdapter.fly();
             duckAdapter.gobble();
 
+
             Console.ReadLine();
         }
     }
