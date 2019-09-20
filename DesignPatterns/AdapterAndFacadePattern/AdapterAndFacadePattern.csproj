@@ -49,6 +49,15 @@
     <Compile Include="Adapter\TurkeyModel\DuckAdapter.cs" />
     <Compile Include="Adapter\TurkeyModel\ITurkey.cs" />
     <Compile Include="Adapter\TurkeyModel\WildTurkey.cs" />
+    <Compile Include="Facade\Amplifier.cs" />
+    <Compile Include="Facade\CDPlayer.cs" />
+    <Compile Include="Facade\DvdPlayer.cs" />
+    <Compile Include="Facade\HomeTheaterFacade.cs" />
+    <Compile Include="Facade\PopcornPopper.cs" />
+    <Compile Include="Facade\Projector.cs" />
+    <Compile Include="Facade\Screen.cs" />
+    <Compile Include="Facade\TheatherLights.cs" />
+    <Compile Include="Facade\Tuner.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
