@@ -8,7 +8,7 @@ namespace TemplateMethodPattern.Template
 {
     public abstract class CaffeineBeverage
     {
-        void prepareReceipe()
+        public void prepareReceipe()
         {
             boilWater();
             brew();
@@ -18,14 +18,14 @@ namespace TemplateMethodPattern.Template
 
         public abstract void addCondiments();
 
-        public void pourInCoup()
+        private void pourInCoup()
         {
             Console.WriteLine("Pouring into coup");
         }
 
         public abstract void brew();
 
-        public void boilWater()
+        private void boilWater()
         {
             Console.WriteLine("Boiling condiments");
         }
