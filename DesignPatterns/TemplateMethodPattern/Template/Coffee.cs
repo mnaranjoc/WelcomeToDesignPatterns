@@ -17,5 +17,16 @@ namespace TemplateMethodPattern.Template
         {
             Console.WriteLine("Dripping coffee through filter");
         }
+
+        public override bool customerWantsCondiments()
+        {
+            string answer = "";
+
+            Console.WriteLine("Would you like milk and sugar with your coffee? (Y/N)");
+            answer = Console.ReadLine();
+            answer = answer.ToLower();
+
+            return (answer.Equals("y")) ? true : false;
+        }
     }
 }

@@ -13,7 +13,15 @@ namespace TemplateMethodPattern.Template
             boilWater();
             brew();
             pourInCoup();
-            addCondiments();
+            if (customerWantsCondiments())
+            {
+                addCondiments();
+            }
+        }
+
+        public virtual bool customerWantsCondiments()
+        {
+            return true;
         }
 
         public abstract void addCondiments();
