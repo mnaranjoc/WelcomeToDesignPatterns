@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace IteratorAndCompositePattern
+{
+    class MenuItem
+    {
+        public string name { get; set; }
+        public string description { get; set; }
+        public bool vegetarian { get; set; }
+        public double price { get; set; }
+
+        public MenuItem(string name, string description, bool vegetarian, double price)
+        {
+            this.name = name;
+            this.description = description;
+            this.vegetarian = vegetarian;
+            this.price = price;
+        }
+    }
+}

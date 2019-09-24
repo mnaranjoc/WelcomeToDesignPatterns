@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
 
 namespace IteratorAndCompositePattern
 {
@@ -10,6 +7,13 @@ namespace IteratorAndCompositePattern
     {
         static void Main(string[] args)
         {
+            DinerMenu dinerMenu = new DinerMenu();
+            PancakeHouseMenu pancakeMenu = new PancakeHouseMenu();
+            Waitress waitress = new Waitress(pancakeMenu, dinerMenu);
+
+            waitress.printMenu();
+
+            Console.ReadLine();
         }
     }
 }
