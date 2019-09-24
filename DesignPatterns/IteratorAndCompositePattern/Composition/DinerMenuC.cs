@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace IteratorAndCompositePattern
+namespace IteratorAndCompositePattern.Composition
 {
-    class DinerMenu : IMenu
+    class DinerMenuC : IMenuC
     {
         public static int MAX_ITEMS = 6;
         int numOfItems = 0;
-        MenuItem[] menuItems;
+        MenuItemC[] menuItems;
 
-        public DinerMenu()
+        public DinerMenuC()
         {
-            menuItems = new MenuItem[MAX_ITEMS];
+            menuItems = new MenuItemC[MAX_ITEMS];
 
             addItem("Vegetarian BLT",
                     "Fake Bacon with Lettuce and tomatoe on whole wheat",
@@ -35,8 +35,8 @@ namespace IteratorAndCompositePattern
 
         public void addItem(string name, string description, bool vegetarian, double price)
         {
-            MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-            
+            MenuItemC menuItem = new MenuItemC(name, description, vegetarian, price);
+
             if (numOfItems >= MAX_ITEMS)
                 Console.WriteLine("Menu is full!");
             else
@@ -50,9 +50,9 @@ namespace IteratorAndCompositePattern
         {
             return menuItems;
         }*/
-        public Iterator createIterator()
+        public IteratorC createIterator()
         {
-            return new DinerMenuIterator(menuItems);
+            return new DinerMenuIteratorC(menuItems);
         }
     }
 }

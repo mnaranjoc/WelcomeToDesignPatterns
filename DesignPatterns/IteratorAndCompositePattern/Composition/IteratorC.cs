@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace IteratorAndCompositePattern
+namespace IteratorAndCompositePattern.Composition
 {
-    public interface Iterator
+    public interface IteratorC
     {
         bool hasNext();
         Object next();

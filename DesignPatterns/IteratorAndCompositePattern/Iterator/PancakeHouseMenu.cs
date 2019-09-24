@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace IteratorAndCompositePattern
+namespace IteratorAndCompositePattern.Iterator
 {
     class PancakeHouseMenu : IMenu
     {

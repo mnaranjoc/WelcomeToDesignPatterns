@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections;
 
-namespace IteratorAndCompositePattern
+namespace IteratorAndCompositePattern.Iterator
 {
     class Waitress
     {

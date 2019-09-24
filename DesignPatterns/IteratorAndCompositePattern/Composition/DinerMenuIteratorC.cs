@@ -1,11 +1,11 @@
-﻿namespace IteratorAndCompositePattern
+﻿namespace IteratorAndCompositePattern.Composition
 {
-    class DinerMenuIterator : Iterator
+    class DinerMenuIteratorC : IteratorC
     {
-        MenuItem[] items;
+        MenuItemC[] items;
         int position = 0;
 
-        public DinerMenuIterator(MenuItem[] items)
+        public DinerMenuIteratorC(MenuItemC[] items)
         {
             this.items = items;
         }
@@ -20,7 +20,7 @@
 
         public object next()
         {
-            MenuItem menuItem = items[position];
+            MenuItemC menuItem = items[position];
             position++;
             return menuItem;
         }

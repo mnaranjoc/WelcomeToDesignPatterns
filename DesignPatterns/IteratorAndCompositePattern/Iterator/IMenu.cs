@@ -1,4 +1,4 @@
-﻿namespace IteratorAndCompositePattern
+﻿namespace IteratorAndCompositePattern.Iterator
 {
     public interface IMenu
     {
