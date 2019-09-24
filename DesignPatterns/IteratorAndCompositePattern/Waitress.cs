@@ -1,29 +1,29 @@
 ﻿using System;
+using System.Collections;
 
 namespace IteratorAndCompositePattern
 {
     class Waitress
     {
-        IMenu pancakeHouseMenu;
-        IMenu dinerMenu;
+        ArrayList menus;
 
-        public Waitress(IMenu pancakeHouseMenu, IMenu dinerMenu)
+        public Waitress(ArrayList menus)
         {
-            this.pancakeHouseMenu = pancakeHouseMenu;
-            this.dinerMenu = dinerMenu;
+            this.menus = menus;
         }
 
         public void printMenu()
         {
             Console.WriteLine("*MENU*");
 
-            Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-            Console.WriteLine("\nBREAKFAST");
-            printMenu(pancakeIterator);
+            IEnumerator menuIterator = menus.GetEnumerator();
 
-            Iterator dinerIterator = dinerMenu.createIterator();
-            Console.WriteLine("\nLUNCH");
-            printMenu(dinerIterator);
+            while (menuIterator.MoveNext())
+            {
+                IMenu menuItem = menuIterator.Current as IMenu;
+                printMenu(menuItem.createIterator());
+                Console.WriteLine("\n");
+            }
         }
 
         private void printMenu(Iterator iterator)

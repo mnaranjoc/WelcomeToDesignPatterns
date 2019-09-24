@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 
 namespace IteratorAndCompositePattern
 {
@@ -7,10 +8,11 @@ namespace IteratorAndCompositePattern
     {
         static void Main(string[] args)
         {
-            DinerMenu dinerMenu = new DinerMenu();
-            PancakeHouseMenu pancakeMenu = new PancakeHouseMenu();
-            Waitress waitress = new Waitress(pancakeMenu, dinerMenu);
+            ArrayList menus = new ArrayList();
+            menus.Add(new DinerMenu());
+            menus.Add(new PancakeHouseMenu());
 
+            Waitress waitress = new Waitress(menus);
             waitress.printMenu();
 
             Console.ReadLine();
