@@ -60,6 +60,7 @@
     <Compile Include="Iterator\MenuItem.cs" />
     <Compile Include="Iterator\PancakeHouseMenu.cs" />
     <Compile Include="Iterator\PancakeHouseMenuIterator.cs" />
+    <Compile Include="Composition\Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Iterator\Waitress.cs" />

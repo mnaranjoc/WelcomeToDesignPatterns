@@ -8,17 +8,17 @@ namespace IteratorAndCompositePattern.Composition
 {
     public abstract class MenuComponent
     {
-        public void add(MenuComponent menuComponent)
+        public virtual void add(MenuComponent menuComponent)
         {
             throw new NotSupportedException("");
         }
 
-        public void remove(MenuComponent menuComponent)
+        public virtual void remove(MenuComponent menuComponent)
         {
             throw new NotSupportedException("");
         }
 
-        public MenuComponent getChild(int i)
+        public virtual MenuComponent getChild(int i)
         {
             throw new NotSupportedException("");
         }
