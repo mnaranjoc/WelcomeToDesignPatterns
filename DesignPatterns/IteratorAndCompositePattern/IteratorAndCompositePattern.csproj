@@ -47,6 +47,8 @@
     <Compile Include="Composition\DinerMenuIteratorC.cs" />
     <Compile Include="Composition\IMenuC.cs" />
     <Compile Include="Composition\IteratorC.cs" />
+    <Compile Include="Composition\MenuComponent.cs" />
+    <Compile Include="Composition\MenuItem.cs" />
     <Compile Include="Composition\MenuItemC.cs" />
     <Compile Include="Composition\PancakeHouseMenuC.cs" />
     <Compile Include="Composition\PancakeHouseMenuIteratorC.cs" />
