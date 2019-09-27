@@ -51,8 +51,16 @@ namespace IteratorAndCompositePattern.Composition
             print += "\n " + getName();
             print += ", " + getDescription();
             print += "-----------------"; ;
-
             Console.WriteLine(print);
+
+            IEnumerator enumerator= menuComponents.GetEnumerator();
+            while(enumerator.MoveNext())
+            {
+                MenuComponent menuComponent = (MenuComponent)enumerator.Current;
+                menuComponent.print();
+
+                // 370
+            }
         }
     }
 }

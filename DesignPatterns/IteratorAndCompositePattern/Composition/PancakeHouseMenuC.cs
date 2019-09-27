@@ -2,11 +2,11 @@
 
 namespace IteratorAndCompositePattern.Composition
 {
-    class PancakeHouseMenu : IMenuC
+    class PancakeHouseMenuC : IMenuC
     {
         ArrayList menuItems;
 
-        public PancakeHouseMenu()
+        public PancakeHouseMenuC()
         {
             menuItems = new ArrayList();
 
