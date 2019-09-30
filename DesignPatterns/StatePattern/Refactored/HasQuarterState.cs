@@ -4,6 +4,7 @@ namespace StatePattern.Refactored
 {
     class HasQuarterState : IState
     {
+        Random randomWinner = new Random(DateTime.Now.Millisecond);
         GumballMachine gumballMachine;
 
         public HasQuarterState(GumballMachine gumballMachine)
@@ -30,7 +31,14 @@ namespace StatePattern.Refactored
         public void turnCrank()
         {
             Console.WriteLine("You turned...");
-            gumballMachine.setState(gumballMachine.getSoldState());
+
+            int winner = randomWinner.Next(10);
+            if ((winner == 4) && (gumballMachine.getCount() > 1))
+            {
+                gumballMachine.setState(gumballMachine.getWinnerState());
+            }
+            else
+                gumballMachine.setState(gumballMachine.getSoldState());
         }
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="Refactored\NoQuarterState.cs" />
     <Compile Include="Refactored\SoldOutState.cs" />
     <Compile Include="Refactored\SoldState.cs" />
+    <Compile Include="Refactored\WinnerState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

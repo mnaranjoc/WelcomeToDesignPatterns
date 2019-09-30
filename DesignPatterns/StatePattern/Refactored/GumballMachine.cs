@@ -8,6 +8,7 @@ namespace StatePattern.Refactored
         public static IState noQuarterState;
         public static IState hasQuarterState;
         public static IState soldState;
+        public static IState winnerState;
 
         IState state = soldOutState;
         int count = 0;
@@ -18,6 +19,7 @@ namespace StatePattern.Refactored
             noQuarterState = new NoQuarterState(this);
             hasQuarterState = new HasQuarterState(this);
             soldState = new SoldState(this);
+            winnerState = new WinnerState(this);
 
             this.count = numberGumballs;
             if (numberGumballs > 0)
@@ -72,6 +74,11 @@ namespace StatePattern.Refactored
         public IState getSoldState()
         {
             return soldState;
+        }
+
+        public IState getWinnerState()
+        {
+            return winnerState;
         }
 
         public int getCount()

@@ -18,34 +18,13 @@ namespace StatePattern
 
             Console.WriteLine(machine);
 
-            machine.insertQuarter();
-            machine.turnCrank();
+            for (int i = 0; i <= 6; i++)
+            {
+                machine.insertQuarter();
+                machine.turnCrank();
 
-            Console.WriteLine(machine);
-
-            machine.insertQuarter();
-            machine.ejectQuarter();
-            machine.turnCrank();
-
-            Console.WriteLine(machine);
-
-            machine.insertQuarter();
-            machine.turnCrank();
-            machine.insertQuarter();
-            machine.turnCrank();
-            machine.ejectQuarter();
-
-            Console.WriteLine(machine);
-
-            machine.insertQuarter();
-            machine.insertQuarter();
-            machine.turnCrank();
-            machine.insertQuarter();
-            machine.turnCrank();
-            machine.insertQuarter();
-            machine.turnCrank();
-
-            Console.WriteLine(machine);
+                Console.WriteLine(machine);
+            }            
         }
 
         public static void executeOldCode()
