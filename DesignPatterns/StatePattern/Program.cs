@@ -1,5 +1,4 @@
-﻿using StatePattern.Old;
-using System;
+﻿using System;
 
 namespace StatePattern
 {
@@ -15,12 +14,43 @@ namespace StatePattern
 
         public static void executeRefactoredCode()
         {
+            Refactored.GumballMachine machine = new Refactored.GumballMachine(5);
 
+            Console.WriteLine(machine);
+
+            machine.insertQuarter();
+            machine.turnCrank();
+
+            Console.WriteLine(machine);
+
+            machine.insertQuarter();
+            machine.ejectQuarter();
+            machine.turnCrank();
+
+            Console.WriteLine(machine);
+
+            machine.insertQuarter();
+            machine.turnCrank();
+            machine.insertQuarter();
+            machine.turnCrank();
+            machine.ejectQuarter();
+
+            Console.WriteLine(machine);
+
+            machine.insertQuarter();
+            machine.insertQuarter();
+            machine.turnCrank();
+            machine.insertQuarter();
+            machine.turnCrank();
+            machine.insertQuarter();
+            machine.turnCrank();
+
+            Console.WriteLine(machine);
         }
 
         public static void executeOldCode()
         {
-            GumballMachine machine = new GumballMachine(5);
+            Old.GumballMachine machine = new Old.GumballMachine(5);
 
             Console.WriteLine(machine);
 

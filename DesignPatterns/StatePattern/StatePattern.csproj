@@ -47,6 +47,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Refactored\GumballMachine.cs" />
+    <Compile Include="Refactored\HasQuarterState.cs" />
+    <Compile Include="Refactored\IState.cs" />
+    <Compile Include="Refactored\NoQuarterState.cs" />
+    <Compile Include="Refactored\SoldOutState.cs" />
+    <Compile Include="Refactored\SoldState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

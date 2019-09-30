@@ -4,89 +4,79 @@ namespace StatePattern.Refactored
 {
     class GumballMachine
     {
-        public static int SOLD_OUT = 0;
-        public static int NO_QUARTER = 1;
-        public static int HAS_QUARTER = 2;
-        public static int SOLD = 3;
+        public static IState soldOutState;
+        public static IState noQuarterState;
+        public static IState hasQuarterState;
+        public static IState soldState;
 
-        int state = SOLD_OUT;
+        IState state = soldOutState;
         int count = 0;
 
-        public GumballMachine(int count)
+        public GumballMachine(int numberGumballs)
         {
-            this.count = count;
-            if (count > 0)
+            soldOutState = new SoldOutState(this);
+            noQuarterState = new NoQuarterState(this);
+            hasQuarterState = new HasQuarterState(this);
+            soldState = new SoldState(this);
+
+            this.count = numberGumballs;
+            if (numberGumballs > 0)
             {
-                state = NO_QUARTER;
+                state = noQuarterState;
             }
         }
 
         public void insertQuarter()
         {
-            if (state == HAS_QUARTER)
-                Console.WriteLine("You can't insert another quarter!");
-            else if (state == NO_QUARTER)
-            {
-                Console.WriteLine("You inserted a quarter");
-                state = HAS_QUARTER;
-            }
-            else if (state == SOLD_OUT)
-                Console.WriteLine("You can't insert a quarter, the machine is sold out");
-            else if (state == SOLD)
-                Console.WriteLine("Please wait, we're already giving you a gumball");
+            state.insertQuarter();
         }
 
         public void ejectQuarter()
         {
-            if (state == HAS_QUARTER)
-            {
-                Console.WriteLine("Quarter returned");
-                state = NO_QUARTER;
-            }
-            else if (state == NO_QUARTER)
-                Console.WriteLine("You haven't inserted a quarter");
-            else if (state == SOLD)
-                Console.WriteLine("Sorry, you already turned the crank");
-            else if (state == SOLD_OUT)
-                Console.WriteLine("You can't eject, you haven't inserted a quarter yet");
+            state.ejectQuarter();
         }
 
         public void turnCrank()
         {
-            if (state == SOLD)
-                Console.WriteLine("Turning twice doens't get you another gumball!!");
-            else if (state == NO_QUARTER)
-                Console.WriteLine("You turned but there's no quarter");
-            else if (state == SOLD_OUT)
-                Console.WriteLine("You turned but there are no gumballs");
-            else if (state == HAS_QUARTER)
-            {
-                Console.WriteLine("You turned...");
-                state = SOLD;
-                dispense();
-            }
+            state.turnCrank();
+            state.dispense();
         }
 
-        public void dispense()
+        public void releaseBall()
         {
-            if (state == SOLD)
-            {
-                Console.WriteLine("A gumball comes out rolling on the slot");
+            Console.WriteLine("A gumball comes rolling out of the slot...");
+            if (count != 0)
                 count--;
-                if (count == 0)
-                {
-                    Console.WriteLine("Oops, out of gumballs");
-                    state = SOLD_OUT;
-                }
-                else
-                    state = NO_QUARTER;
-            }
-            else if (state == NO_QUARTER)
-                Console.WriteLine("You need to pay first");
-            else if (state == SOLD_OUT)
-                Console.WriteLine("No gumball dispensed");
-            else if (state == HAS_QUARTER)
-                Console.WriteLine("No gumball dispensed");
+        }
+
+        public void setState(IState state)
+        {
+            this.state = state;
+        }
+
+        public IState getSoldOutState()
+        {
+            return soldOutState;
+        }
+
+        public IState getNoQuarterState()
+        {
+            return noQuarterState;
+        }
+
+        public IState getHasQuarterState()
+        {
+            return hasQuarterState;
+        }
+
+        public IState getSoldState()
+        {
+            return soldState;
+        }
+
+        public int getCount()
+        {
+            return count;
         }
 
         public override string ToString()
