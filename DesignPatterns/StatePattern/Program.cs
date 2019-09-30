@@ -1,14 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using StatePattern.Old;
+using System;
 
 namespace StatePattern
 {
     class Program
     {
         static void Main(string[] args)
+        {
+            //Program.executeOldCode();
+            Program.executeRefactoredCode();
+
+            Console.ReadLine();
+        }
+
+        public static void executeRefactoredCode()
+        {
+
+        }
+
+        public static void executeOldCode()
         {
             GumballMachine machine = new GumballMachine(5);
 
@@ -42,8 +52,6 @@ namespace StatePattern
             machine.turnCrank();
 
             Console.WriteLine(machine);
-
-            Console.ReadLine();
         }
     }
 }

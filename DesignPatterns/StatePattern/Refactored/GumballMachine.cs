@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StatePattern
+namespace StatePattern.Refactored
 {
     class GumballMachine
     {
@@ -16,7 +12,7 @@ namespace StatePattern
         int state = SOLD_OUT;
         int count = 0;
 
-        public GumballMachine(int  count)
+        public GumballMachine(int count)
         {
             this.count = count;
             if (count > 0)
