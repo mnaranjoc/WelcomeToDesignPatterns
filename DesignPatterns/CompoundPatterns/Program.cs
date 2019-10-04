@@ -11,6 +11,7 @@ namespace CompoundPatterns
         static void Main(string[] args)
         {
             // 507
+            // 540
         }
     }
 }
